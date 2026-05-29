@@ -29,9 +29,9 @@ const socials = [
         <!-- لوگو + متن -->
         <div class="flex items-center gap-sm">
           <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center text-white font-bold text-sm">
-            S
+            ح
           </div>
-          <span class="text-dark-400">طراحی و توسعه با ❤ توسط Sam</span>
+          <span class="text-dark-400">طراحی و توسعه با ❤ توسط حسین</span>
         </div>
 
         <!-- شبکه‌های اجتماعی -->

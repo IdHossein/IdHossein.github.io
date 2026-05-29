@@ -43,7 +43,7 @@ function scrollTo(id: string) {
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-2xl leading-tight animate-fade-in-up">
             <span class="text-white">سلام، من</span>
             <br>
-            <span class="bg-gradient-to-l from-primary-400 to-primary-600 bg-clip-text text-transparent">Sam</span>
+            <span class="bg-gradient-to-l from-primary-400 to-primary-600 bg-clip-text text-transparent">حسین</span>
             <span class="text-white"> هستم</span>
           </h1>
 
@@ -113,7 +113,7 @@ function scrollTo(id: string) {
 
             <!-- آواتار -->
             <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden glass p-2">
-              <svg viewBox="0 0 200 200" class="w-full h-full rounded-full" aria-label="آواتار Sam - برنامه‌نویس فول استک" role="img">
+              <svg viewBox="0 0 200 200" class="w-full h-full rounded-full" aria-label="آواتار حسین - برنامه‌نویس فول استک" role="img">
                 <defs>
                   <radialGradient id="bgGrad" cx="40%" cy="35%" r="65%">
                     <stop offset="0%" stop-color="#4f46e5"/>
@@ -162,7 +162,7 @@ function scrollTo(id: string) {
                   fill="url(#letterGrad)"
                   filter="url(#letterShadow)"
                   letter-spacing="-2"
-                >S</text>
+                >ح</text>
 
                 <!-- خط زیر حرف -->
                 <rect x="68" y="132" width="64" height="3" rx="1.5" fill="#818cf8" opacity="0.35"/>

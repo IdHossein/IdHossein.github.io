@@ -70,9 +70,9 @@ onUnmounted(() => {
             class="flex items-center gap-sm group"
           >
             <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center text-white font-bold text-lg shadow-md">
-              S
+              ح
             </div>
-            <span class="text-lg font-bold text-white hidden sm:block">Sam</span>
+            <span class="text-lg font-bold text-white hidden sm:block">حسین</span>
           </a>
 
           <!-- ناوبری دسکتاپ -->
