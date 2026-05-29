@@ -1,0 +1,173 @@
+@import "tailwindcss";
+@import "./fonts.css";
+@import "./icons.css";
+
+@theme {
+  /* ── رنگ‌های اصلی ── */
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-900: #312e81;
+
+  /* ── رنگ‌های تیره (slate) ── */
+  --color-dark-300: #cbd5e1;
+  --color-dark-400: #94a3b8;
+  --color-dark-500: #64748b;
+  --color-dark-600: #475569;
+  --color-dark-700: #334155;
+  --color-dark-800: #1e293b;
+  --color-dark-900: #0f172a;
+  --color-dark-950: #020617;
+
+  /* ── فاصله‌گذاری ── */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  --spacing-4xl: 40px;
+
+  /* ── گردی گوشه ── */
+  --radius-sm:  6px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-2xl: 20px;
+
+  /* ── اندازه متن ── */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-lg:   18px;
+  --text-xl:   20px;
+  --text-2xl:  24px;
+  --text-3xl:  30px;
+  --text-4xl:  36px;
+  --text-5xl:  48px;
+  --text-6xl:  60px;
+
+  /* ── line-height ── */
+  --leading-tight:   1.25;
+  --leading-snug:    1.375;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose:   1.7;
+
+  /* ── سایه ── */
+  --shadow-sm:     0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md:     0 4px 16px rgba(0,0,0,0.06);
+  --shadow-lg:     0 25px 50px -12px rgba(0,0,0,0.25);
+  --shadow-glow:   0 0 40px rgba(99,102,241,0.15);
+  --shadow-button: 0 4px 15px rgba(99,102,241,0.4);
+
+  /* ── فونت ── */
+  --font-sans: "Vazirmatn", system-ui, sans-serif;
+}
+
+/* ── ترنزیشن سراسری ── */
+:root {
+  --transition-fast:   all 0.15s ease;
+  --transition-normal: all 0.25s ease-out;
+  --transition-slow:   all 0.5s ease;
+
+  --glass-bg:           rgb(255 255 255 / 0.05);
+  --glass-bg-hover:     rgb(255 255 255 / 0.08);
+  --glass-border:       rgb(255 255 255 / 0.1);
+  --glass-border-hover: rgb(255 255 255 / 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+}
+
+::selection {
+  background-color: #6366f1;
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* ── کلاس glass (ترکیب backdrop-filter + رنگ + حاشیه) ── */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  transition: background 0.25s ease-out, border-color 0.25s ease-out;
+
+  &:hover {
+    background: var(--glass-bg-hover);
+    border-color: var(--glass-border-hover);
+  }
+}
+
+/* ── انیمیشن reveal (IntersectionObserver) ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── کی‌فریم‌ها ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-5px); }
+}
+
+.animate-fade-in     { animation: fadeIn      0.6s ease forwards; }
+.animate-fade-in-up  { animation: fadeInUp    0.6s ease forwards; }
+.animate-float       { animation: float       3s ease-in-out infinite; }
+.animate-bounce-slow { animation: bounceSlow  2s ease-in-out infinite; }
+
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+.animation-delay-500 { animation-delay: 500ms; }
+
+/* ── motion: reduce ── */
+/* ── پترن پس‌زمینه ── */
+.bg-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236366f1' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}

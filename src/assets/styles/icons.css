@@ -1,0 +1,25 @@
+/*
+  Assem icon font — فایل‌های فونت را در src/assets/fonts/ قرار دهید
+  سپس @font-face زیر را فعال کنید و import را در main.css اضافه نمایید.
+
+  @font-face {
+    font-family: "Assem";
+    src: url("@/assets/fonts/Assem.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+*/
+
+.icon {
+  font-family: "Assem", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
